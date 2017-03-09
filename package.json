@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/harrydengchao/StorageFormat.git"
+    "url": "git+https://github.com/harrydengchao/storage-format.git"
   },
   "keywords": [
     "storage",
@@ -20,9 +20,9 @@
   "author": "DengChao",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/harrydengchao/StorageFormat/issues"
+    "url": "https://github.com/harrydengchao/storage-format/issues"
   },
-  "homepage": "https://github.com/harrydengchao/StorageFormat#readme",
+  "homepage": "https://github.com/harrydengchao/storage-format#readme",
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-loader": "^6.4.0",
