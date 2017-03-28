@@ -38,3 +38,11 @@ Storage.Local.remove('name');
 Storage.Local.remove('user.info.age');
 
 ```
+
+### 标签引用
+```javascript
+<script type="text/javascript" src="./lib/storage-format.min.js"></script>
+<script type="text/javascript">
+  window.Storage.default.Session.set('name', 'Jack')
+</script>
+```
