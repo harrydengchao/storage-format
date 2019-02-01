@@ -1,48 +1,34 @@
-### Explain
-- [x] storage: Format the settings and get the plugins for Storage
+# storage-format
 
----
 
-> ### Storage
+## Install
 
-* This is mainly for the convenience of their own use, but also inspired by mongodb.
-* Greatly simplifies the operation of the Web for data caching
-
-```javascript
-npm install --save storage-format
+```bash
+$ npm i -S storage-format
 ```
 
-### Use
+## Uasge
+
+> * `s.local` use `window.localStorage`
+> * `s.session` use `window.sessionStorage`
+
 ```javascript
-// import storage-format
-import Storage from 'storage-format'
+import s from 'storage-format'
 
-/**
- * There are two APIs that use the method exactly the same
- * Storage.Local <= window.localStorage
- * Storage.Session <= window.sessionStorage
- */
+s.local.setItem('name', 'tom')
+s.local.getItem('name')
+// output: "tom"
+s.local.removeItem('name')
 
-// save data
-Storage.Local.set('name', 'Jack');  // => { "name": "Jack" }
+s.local.setItem('a.b.c', '123')
+s.local.getItem('a.b')
+// output: {c: "123"}
+s.local.removeItem('a.b')
+s.local.clear()
 
-// save data
-Storage.Local.set('user.info.age', 26);  // => { "user": { "info": { "age": 26 } } }
-
-// get data
-Storage.Local.get('name');  // => Jack
-Storage.Local.get('user.info.age'); // => 26
-
-// remove data
-Storage.Local.remove('name');
-Storage.Local.remove('user.info.age');
-
-```
-
-### 标签引用
-```javascript
-<script type="text/javascript" src="./lib/storage-format.min.js"></script>
-<script type="text/javascript">
-  window.Storage.default.Session.set('name', 'Jack')
-</script>
+s.session.setItem('a.b.c', '123')
+s.session.getItem('a.b')
+// output: {c: "123"}
+s.session.removeItem('a.b')
+s.session.clear()
 ```
